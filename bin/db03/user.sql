@@ -8,6 +8,13 @@
  이메일  문자(320)  중복방지
  가입일  날짜       기본값    오늘
  
+ CREATE TABLE TMEMBER (
+	
+	USERNUM, USERNAME, USERID, USERPWD, EMAIL, LDAT
+ );
+ 
+ 
+ 
  
 TUSER
  아이디  문자(20)   필수입력   기본키
