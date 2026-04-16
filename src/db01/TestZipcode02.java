@@ -1,10 +1,11 @@
 package db01;
 
+// import java.sql.*; 도 가능 전부 실행 말고 적힌것만 실행하고 싶으면 여기서 CTRL + SHIFT + O 누르기
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.Statement; 
 
 public class TestZipcode02 {
 

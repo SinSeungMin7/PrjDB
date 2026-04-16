@@ -12,7 +12,7 @@ https://mvnrepository.com/
    lib 폴더에 
     ojdbc11-23.26.1.0.0.jar 를 붙여넣는다
 
-  sts PrjDB project 선택  마우스 오른쪽 클릭
+  sts PrjDB project 선택 후 마우스 오른쪽 클릭
   properties 선택
    -> Java Build Path 
       -> Libraries tab

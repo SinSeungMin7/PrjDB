@@ -2,6 +2,7 @@ package db01;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -21,13 +22,22 @@ public class TestZipcodeSelf {
 		// sql 명령문
 		Statement  stmt = conn.createStatement();
 		String sql = 
-				  "SELECT DEPARTMENT_ID , first_name || ' ' || last_name, phone_number "
+				  "SELECT DEPARTMENT_ID AS 부서번호, "
+				  + "     first_name || ' ' || last_name AS 이름, "
+				  + "     phone_number AS 전화번호 "
 				+ "FROM   EMPLOYEES ";
 		System.out.println( sql );
 		
-		Result rs = stmt.executeQuery(sql);
-
+		ResultSet  rs   = stmt.executeQuery(sql);
+		while( rs.next() != false ) {
+			System.out.print(rs.getString("부서번호") + ", ");
+			System.out.print(rs.getString("이름") + ", ");
+			System.out.print(rs.getString("전화번호") );
+			System.out.println();
+		}
 		
+
+		rs.close();
 		stmt.close();
 		conn.close();
 	}
