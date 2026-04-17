@@ -8,13 +8,6 @@
  이메일  문자(320)  중복방지
  가입일  날짜       기본값    오늘
  
- CREATE TABLE TMEMBER (
-	
-	USERNUM, USERNAME, USERID, USERPWD, EMAIL, LDAT
- );
- 
- 
- 
  
 TUSER
  아이디  문자(20)   필수입력   기본키
@@ -34,5 +27,21 @@ TUSER
  INSERT  INTO   TUSER (USERID, USERNAME, EMAIL) VALUES ('SKY4', '스카이4', 'SKY4@GREEN.COM');
  INSERT  INTO   TUSER (USERID, USERNAME, EMAIL) VALUES ('SKY5', '스카이5', 'SKY5@GREEN.COM');
  COMMIT;
+ 
+select * from TUSER;    
+
+select * from TUSER where USER = 'sky'
+
+
+
+SELECT*FROM TUSER WHERE USERID = SKY10;
+
+UPDATE TUSER
+SET    USERNAME = '스카이오', EMAIL = 'SKYO@GREEN.COM'
+WHERE  USERID = 'sky5';
+ROLLBACK;
+
+DELETE FROM TUSER
+WHERE  USERID = 'SKY';
  
  

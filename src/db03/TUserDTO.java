@@ -12,10 +12,15 @@ public class TUserDTO {
    // Constructor
    public TUserDTO() {}
    public TUserDTO(String userid, String username, String email) {
-	this.userid = userid;
-	this.username = username;
-	this.email = email;
+	   this.userid    = userid;
+	   this.username  = username;
+	   this.email     = email;
    }
+   public TUserDTO(String username, String email) {
+	   this.username  = username;
+	   this.email     = email;		   
+   }
+   
    // Getter / Setter
    public String getUserid() {
 	return userid;
