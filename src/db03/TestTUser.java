@@ -69,7 +69,8 @@ public class TestTUser {
 				System.out.println("수정할 내용를 입력하세요");
 				tuser                =  inputUpdateData(); // 수정된 회원이 존재하여 변경에 성공하면 1, 해당 아이디가 없어 실패하면 0이 담깁니다.
 				
-				aftcnt               =  updateTUser( orgUserid, tuser );
+				aftcnt               =  updateTUser( orgUserid, tuser ); // 기존에 저장된 회원 정보를 새로운 정보로 덮어쓰는(Update) 과정 그 결과를 aftcnt 변수에 담는
+				           // 수정하고싶은 식별자 ID (orgUserid), 수정할 새로운 데이터들을 담고 있는 객체(tuser)
 				System.out.println(aftcnt + "건 수정되었습니다");
 				
 				System.out.println("Press Enter Key ....");
